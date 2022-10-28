@@ -7,5 +7,7 @@ class NearestColorsTests {
 
     @Test fun `an exact match is found immediately`() {
         assertEquals(listOf(Color.Red), nearestColors("FF0000"))
+        assertEquals(listOf(Color.Green), nearestColors("00FF00"))
+        assertEquals(listOf(Color.Blue), nearestColors("0000FF"))
     }
 }
