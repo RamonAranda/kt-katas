@@ -26,3 +26,8 @@ Example: the nearest color of F40203 is FF0000.
 The idea is to use a set of colors (FF0000, 00FF00, 0000FF) and guess the farthest color from the set.
 
 Example: the nearest color of F40203 is 00FF00.
+
+## Part 3: Return a list of the nearest/farthest colors
+Instead of returning a single color, return a list of the nearest/farthest colors in the case some of them are equally near/far.
+
+Example: the nearest color of FFFF00 is red/green.
