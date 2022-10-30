@@ -10,14 +10,17 @@ value class Color(private val hexadecimal: String) {
         get() = hexadecimal.substring(3, 5).toInt(16)
     private val blue: Int
         get() = hexadecimal.substring(5, 7).toInt(16)
-    private val colors: List<Pair<BasePaletteColor, Int>>
+    private val sortedColors: Map<Int, List<BasePaletteColor>>
         get() = listOf(
             Pair(BasePaletteColor.RED, highestDecimalColorValue - red),
             Pair(BasePaletteColor.GREEN, highestDecimalColorValue - green),
             Pair(BasePaletteColor.BLUE, highestDecimalColorValue - blue)
         )
+            .groupBy { it.second }
+            .mapValues { it.value.map { pair -> pair.first } }
+            .toSortedMap()
 
-    fun nearestColor(): BasePaletteColor = colors.minByOrNull { it.second }!!.first
+    fun nearestColor(): List<BasePaletteColor> = sortedColors.entries.first().value
 
-    fun farthestColor(): BasePaletteColor = colors.maxByOrNull { it.second }!!.first
+    fun farthestColor(): List<BasePaletteColor> = sortedColors.entries.last().value
 }
