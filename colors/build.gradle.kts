@@ -6,15 +6,14 @@ plugins {
 
 group = "org.katas"
 version = "1.0-SNAPSHOT"
-val kotestVersion = "5.5.3"
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    testImplementation("io.kotest:kotest-runner-junit5:$kotestVersion")
-    testImplementation("io.kotest:kotest-assertions-core:$kotestVersion")
+    testImplementation(kotlin("test"))
+    testImplementation("io.kotest:kotest-runner-junit5:5.5.2")
 }
 
 tasks.test {
