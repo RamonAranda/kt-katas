@@ -41,17 +41,15 @@ sealed class Scale {
 }
 
 
-fun foo(numbers: List<Int>, scale: Scale, accumulated: String): String {
+fun transformToRomanNumeral(numbers: List<Int>, scale: Scale, accumulated: String): String {
     val translatedNumber = scale.translate(numbers.first())
     val newTranslatedNumber = "${translatedNumber}${accumulated}"
     val remainingNumbers = numbers.drop(1)
     return if (scale is Scale.Thousands || remainingNumbers.isEmpty()) newTranslatedNumber
-    else foo(numbers = remainingNumbers, scale = scale.next(), accumulated = newTranslatedNumber)
+    else transformToRomanNumeral(numbers = remainingNumbers, scale = scale.next(), accumulated = newTranslatedNumber)
 }
 
-fun romanNumerals(number: Int): String {
-    val a = number.toString()
-        .map { it.toString().toInt() }
-        .reversed()
-    return foo(a, Scale.Units, "")
-}
+private fun Int.asList(): List<Int> = toString().map { it.toString().toInt() }
+
+fun romanNumerals(number: Int): String =
+    transformToRomanNumeral(numbers = number.asList().reversed(), scale = Scale.Units, accumulated = "")

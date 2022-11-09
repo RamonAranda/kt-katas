@@ -13,7 +13,26 @@ class RomanNumeralsTests : StringSpec({
         romanNumerals(500) shouldBe "D"
         romanNumerals(1000) shouldBe "M"
     }
-    "acceptance" {
+    "it should transform basic additions" {
+        romanNumerals(6) shouldBe "VI"
+        romanNumerals(11) shouldBe "XI"
+        romanNumerals(21) shouldBe "XXI"
+        romanNumerals(51) shouldBe "LI"
+        romanNumerals(56) shouldBe "LVI"
+        romanNumerals(101) shouldBe "CI"
+        romanNumerals(156) shouldBe "CLVI"
+        romanNumerals(888) shouldBe "DCCCLXXXVIII"
+    }
+    "it should transform basic subtractions" {
+        romanNumerals(9) shouldBe "IX"
+        romanNumerals(19) shouldBe "XIX"
+        romanNumerals(49) shouldBe "XLIX"
+        romanNumerals(99) shouldBe "XCIX"
+        romanNumerals(149) shouldBe "CXLIX"
+        romanNumerals(499) shouldBe "CDXCIX"
+        romanNumerals(999) shouldBe "CMXCIX"
+    }
+    "it should transform complex numerals" {
         romanNumerals(48) shouldBe "XLVIII"
         romanNumerals(49) shouldBe "XLIX"
         romanNumerals(50) shouldBe "L"
