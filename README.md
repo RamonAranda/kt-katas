@@ -1,5 +1,6 @@
 # KT-Katas
 
-## Kata 1: [Nearest/Farthest colors](colors/README.md) [(PR #1)](https://github.com/RamonAranda/kt-katas/pull/1)
-## Kata 2: [Diamond](diamond/README.md) [(PR #2)](https://github.com/RamonAranda/kt-katas/pull/3)
-## Kata 3: [Greed](greed/README.md) [(PR #3)](https://github.com/RamonAranda/kt-katas/pull/4)
+## Kata 1: [Nearest/Farthest colors](01.colors/README.md) [(PR#)](https://github.com/RamonAranda/kt-katas/pull/1)
+## Kata 2: [Diamond](02.diamond/README.md) [(PR#)](https://github.com/RamonAranda/kt-katas/pull/3)
+## Kata 3: [Greed](03.greed/README.md) [(PR#)](https://github.com/RamonAranda/kt-katas/pull/4)
+## Kata 4: [Roman numerals](04.roman-numerals/README.md) [(PR#)](https://github.com/RamonAranda/kt-katas/pull/5)
