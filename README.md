@@ -4,4 +4,5 @@
 ## Kata 2: [Diamond](02.diamond/README.md) [(PR#)](https://github.com/RamonAranda/kt-katas/pull/3)
 ## Kata 3: [Greed](03.greed/README.md) [(PR#)](https://github.com/RamonAranda/kt-katas/pull/4)
 ## Kata 4: [Roman numerals](04.roman-numerals/README.md) [(PR#)](https://github.com/RamonAranda/kt-katas/pull/5)
-## Kata 6: [Mastermind](05.mastermind/README.md) [(PR#)](https://github.com/RamonAranda/kt-katas/pull/6)
+## Kata 5: [Mastermind](05.mastermind/README.md) [(PR#)](https://github.com/RamonAranda/kt-katas/pull/6)
+## Kata 6: [Bowling Scores](06.bowling-scores/README.md) [(PR#)]()

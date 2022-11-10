@@ -1,6 +1,6 @@
 package com.katas
 
 
-fun bowlingScores(): Int {
+fun bowlingScores(scores: List<List<Int>>): Int {
     return 0
 }
