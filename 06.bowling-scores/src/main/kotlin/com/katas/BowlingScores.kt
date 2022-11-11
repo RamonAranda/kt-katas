@@ -2,5 +2,5 @@ package com.katas
 
 
 fun bowlingScores(scores: List<List<Int>>): Int {
-    return 0
+    return scores.flatten().sum()
 }
