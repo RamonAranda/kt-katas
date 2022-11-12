@@ -66,17 +66,32 @@ class BowlingScoresTests : StringSpec({
     }
     "it should calculate nine strikes followed by a gutter ball" {
         val score = listOf(
-            listOf(10, 10),
-            listOf(10, 10),
-            listOf(10, 10),
-            listOf(10, 10),
-            listOf(10, 10),
-            listOf(10, 10),
-            listOf(10, 10),
-            listOf(10, 10),
-            listOf(10, 10),
+            listOf(10, 0),
+            listOf(10, 0),
+            listOf(10, 0),
+            listOf(10, 0),
+            listOf(10, 0),
+            listOf(10, 0),
+            listOf(10, 0),
+            listOf(10, 0),
+            listOf(10, 0),
             listOf(0, 0),
         )
         bowlingScores(score) shouldBe 240
+    }
+    "it should calculate mixed scores from a real game" {
+        val score = listOf(
+            listOf(5, 5),       // Spare
+            listOf(4, 0),       // Simple
+            listOf(8, 1),       // Simple
+            listOf(10, 0),      // Strike
+            listOf(0, 10),      // Spare
+            listOf(10, 0),      // Strike
+            listOf(10, 0),      // Strike
+            listOf(10, 0),      // Strike
+            listOf(4, 6),       // Spare
+            listOf(10, 10, 5),  // Strike+Strike+Nothing
+        )
+        bowlingScores(score) shouldBe 186
     }
 })
